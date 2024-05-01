@@ -1,0 +1,213 @@
+.big-cartoon,
+.big-cartoon .big-item {
+    -webkit-tap-highlight-color: transparent;
+    position: relative
+}
+
+.big-cartoon {
+    display: none;
+    width: 100%;
+    z-index: 1
+}
+
+.big-cartoon .big-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+    touch-action: manipulation;
+    -moz-backface-visibility: hidden
+}
+
+.big-cartoon .big-stage:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0
+}
+
+.big-cartoon .big-stage-outer {
+    position: relative;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0)
+}
+
+.big-cartoon .big-item,
+.big-cartoon .big-wrapper {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0)
+}
+
+.big-cartoon .big-item {
+    min-height: 1px;
+    float: left;
+    -webkit-backface-visibility: hidden;
+    -webkit-touch-callout: none
+}
+
+.big-cartoon .big-item img {
+    display: block;
+    width: 100%
+}
+
+.big-cartoon .big-dots.disabled,
+.big-cartoon .big-nav.disabled {
+    display: none
+}
+
+.no-js .big-cartoon,
+.big-cartoon.big-loaded {
+    display: block
+}
+
+.big-cartoon .big-dot,
+.big-cartoon .big-nav .big-next,
+.big-cartoon .big-nav .big-prev {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.big-cartoon .big-nav button.big-next,
+.big-cartoon .big-nav button.big-prev,
+.big-cartoon button.big-dot {
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0 !important;
+    font: inherit
+}
+
+.big-cartoon.big-loading {
+    opacity: 0;
+    display: block
+}
+
+.big-cartoon.big-hidden {
+    opacity: 0
+}
+
+.big-cartoon.big-refresh .big-item {
+    visibility: hidden
+}
+
+.big-cartoon.big-drag .big-item {
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.big-cartoon.big-grab {
+    cursor: move;
+    cursor: grab
+}
+
+.big-cartoon.big-rtl {
+    direction: rtl
+}
+
+.big-cartoon.big-rtl .big-item {
+    float: right
+}
+
+.big-cartoon .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both
+}
+
+.big-cartoon .big-animated-in {
+    z-index: 0
+}
+
+.big-cartoon .big-animated-out {
+    z-index: 1
+}
+
+.big-cartoon .fadeOut {
+    animation-name: fadeOut
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+.big-height {
+    transition: height .5s ease-in-out
+}
+
+.big-cartoon .big-item .big-lazy {
+    opacity: 0;
+    transition: opacity .4s ease
+}
+
+.big-cartoon .big-item .big-lazy:not([src]),
+.big-cartoon .big-item .big-lazy[src^=""] {
+    max-height: 0
+}
+
+.big-cartoon .big-item img.big-lazy {
+    transform-style: preserve-3d
+}
+
+.big-cartoon .big-video-wrapper {
+    position: relative;
+    height: 100%;
+    background: #000
+}
+
+.big-cartoon .big-video-play-icon {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    background: url(big.video.play.png) no-repeat;
+    cursor: pointer;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    transition: transform .1s ease
+}
+
+.big-cartoon .big-video-play-icon:hover {
+    -ms-transform: scale(1.3, 1.3);
+    transform: scale(1.3, 1.3)
+}
+
+.big-cartoon .big-video-playing .big-video-play-icon,
+.big-cartoon .big-video-playing .big-video-tn {
+    display: none
+}
+
+.big-cartoon .big-video-tn {
+    opacity: 0;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: opacity .4s ease
+}
+
+.big-cartoon .big-video-frame {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%
+}
